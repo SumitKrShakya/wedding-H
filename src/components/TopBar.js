@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 const LINKS = [
   { href: "#save-the-date", label: "Save the Date" },
   { href: "#families", label: "Families" },
-  { href: "#couple", label: "The Couple" },
   { href: "#events", label: "Events" },
   { href: "#venues", label: "Venues" },
 ];
@@ -19,7 +18,7 @@ export default function TopBar() {
     >
       <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
         <a href="#home" className="font-script text-2xl text-maroondark leading-none" data-testid="topbar-monogram">
-          Tanishk &amp; Aishwarya
+          Tanishk &amp; <span className="script-cap-a">A</span>ishwarya
         </a>
         <nav className="hidden md:flex items-center gap-7">
           {LINKS.map((l) => (

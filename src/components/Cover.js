@@ -62,7 +62,7 @@ export default function Cover({ onOpen }) {
           <h1 className="font-script text-maroondark mt-4 leading-[1.05]">
             <span className="block text-5xl md:text-6xl">Tanishk</span>
             <span className="block font-display italic text-golddeep text-3xl md:text-4xl my-1">&amp;</span>
-            <span className="block text-5xl md:text-6xl">Aishwarya</span>
+            <span className="block text-5xl md:text-6xl"><span className="script-cap-a">A</span>ishwarya</span>
           </h1>
 
           <div className="flex items-center justify-center gap-3 mt-6" aria-hidden="true">

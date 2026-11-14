@@ -208,3 +208,12 @@ body {
   --c-cocoa: 42 26 58;
   --c-cocoa-soft: 79 61 96;
 }
+
+/* Great Vibes' capital "A" looks like a lowercase "a"; swap in Pinyon Script's true capital */
+.script-cap-a {
+  font-family: "Pinyon Script", "Great Vibes", cursive;
+  font-size: 1.1em;
+  -webkit-text-stroke: 0.02em currentColor;
+  margin-right: -0.03em;
+  line-height: 0;
+}

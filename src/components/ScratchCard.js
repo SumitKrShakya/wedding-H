@@ -185,7 +185,7 @@ export default function ScratchCard() {
           <p className="font-display text-4xl md:text-5xl text-maroondark mt-2" data-testid="scratch-revealed-date">
             13 December 2026
           </p>
-          <p className="font-script text-3xl md:text-4xl text-golddeep mt-2">Tanishk &amp; Aishwarya</p>
+          <p className="font-script text-3xl md:text-4xl text-golddeep mt-2">Tanishk &amp; <span className="script-cap-a">A</span>ishwarya</p>
         </div>
         <canvas
           ref={canvasRef}

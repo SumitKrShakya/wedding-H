@@ -9,7 +9,6 @@ import SaveTheDate from "./components/SaveTheDate";
 import Families from "./components/Families";
 import Events from "./components/Events";
 import Venues from "./components/Venues";
-import Couple from "./components/Couple";
 import Rsvp from "./components/Rsvp";
 import FinalSection from "./components/FinalSection";
 import FloatingControls from "./components/FloatingControls";
@@ -27,7 +26,7 @@ function Loader() {
       <div className="relative w-24 h-24 flex items-center justify-center">
         <span className="absolute inset-0 rounded-full border border-gold/40 border-t-maroondark animate-spin-slow" />
         <span className="absolute inset-2 rounded-full border border-gold/25" />
-        <span className="font-script text-3xl text-golddeep">T&amp;A</span>
+        <span className="font-script text-3xl text-golddeep">T&amp;<span className="script-cap-a">A</span></span>
       </div>
       <p className="font-devanagari text-golddeep text-sm mt-8">॥ श्री गणेशाय नमः ॥</p>
     </motion.div>
@@ -120,15 +119,14 @@ export default function App() {
             <Families />
             <Events />
             {VENUES.length > 0 && <Venues />}
-            <Couple />
             <Rsvp />
           </main>
           <FinalSection />
           <FloatingControls playing={playing} onToggleMusic={toggleMusic} />
+          <ThemePicker />
         </>
       )}
 
-      {phase !== "loading" && <ThemePicker />}
     </div>
   );
 }

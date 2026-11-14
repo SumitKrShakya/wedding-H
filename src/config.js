@@ -15,11 +15,11 @@ export const COUNTDOWN_TARGET_IST = "2026-12-13T00:00:00+05:30";
 
 // EDITABLE: background music file. Replace with your own royalty-free track
 // placed in frontend/public/audio/. Leave empty ("") to disable music entirely.
-export const AUDIO_URL = "/audio/wedding-song.mp3";
+export const AUDIO_URL = "/audio/dhun.mp3";
 
 // EDITABLE: your WhatsApp number in international format, e.g. "919876543210".
 // Used only for the "Confirm on WhatsApp" RSVP option. Leave empty ("") to hide it.
-export const WHATSAPP_NUMBER = "916397942100";
+export const WHATSAPP_NUMBER = "918447301076";
 
 // EDITABLE: paste the exact Google Maps links for each venue here once known.
 // Until then the Get Directions buttons open a Google Maps search for the venue name.
@@ -58,8 +58,8 @@ export const VENUES = [
     date: "9 December 2026",
     address: "33/33A, Rama Road, Block C, Opposite Apollo Cradle Hospital, Kirti Nagar Industrial Area, New Delhi, Delhi 110015",
     functions: ["Mata Ki Chowki · 7–11 PM"],
-    image: "/images/venues/ananda-banquets.webp",
-    imagePosition: "center 30%",
+    image: "/images/venues/venue-1.jpg",
+    imagePosition: "center",
   },
   {
     key: "wedding",
@@ -68,8 +68,8 @@ export const VENUES = [
     date: "13 December 2026",
     address: "11-A, Shivaji Marg, Najafgarh Industrial Area, Moti Nagar, New Delhi, Delhi 110015",
     functions: ["Wedding · 6:30 PM till the stars fade"],
-    image: "/images/venues/grand-horizon.webp",
-    imagePosition: "center 30%",
+    image: "/images/venues/venue-2.jpg",
+    imagePosition: "center",
   },
 ];
 
@@ -77,8 +77,8 @@ export const FAMILIES = [
   {
     side: "Groom's Family",
     members: [
-      { label: "Dada – Dadi", names: "Late Sh. Sunder Arora & Late Smt. Urmil Arora" },
-      { label: "Nana – Nani", names: "Late Sh. Narayan Das Gandhi & Smt. Usha Gandhi" },
+      { label: "Dada – Dadi", names: "Late Sh. Narayan Das Gandhi & Smt. Usha Gandhi" },
+      { label: "Nana – Nani", names: "Late Sh. Sunder Arora & Late Smt. Urmil Arora" },
       { label: "Parents", names: "Sh. Varinder Kr. Gandhi & Smt. Sarita Gandhi" },
     ],
   },

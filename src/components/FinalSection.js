@@ -69,7 +69,7 @@ export default function FinalSection() {
         >
           Tanishk
           <Heart size={26} className="text-gold animate-pulse-soft shrink-0" fill="currentColor" />
-          Aishwarya
+          <span><span className="script-cap-a">A</span>ishwarya</span>
         </motion.p>
 
         <p className="text-gold/80 text-[11px] uppercase tracking-[0.35em] mt-8">

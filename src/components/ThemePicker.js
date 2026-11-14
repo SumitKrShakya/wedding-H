@@ -31,7 +31,14 @@ export default function ThemePicker() {
   };
 
   return (
-    <div ref={panelRef} className="fixed bottom-4 md:bottom-5 right-4 md:right-5 z-[55]" data-testid="theme-picker">
+    <motion.div
+      ref={panelRef}
+      initial={{ opacity: 0, x: 24 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 2, duration: 0.7 }}
+      className="fixed bottom-[72px] md:bottom-[76px] right-4 md:right-5 z-[55]"
+      data-testid="theme-picker"
+    >
       <AnimatePresence>
         {open && (
           <motion.div
@@ -39,7 +46,7 @@ export default function ThemePicker() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 12, scale: 0.95 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="royal-frame absolute bottom-12 md:bottom-14 right-0 w-64 max-w-[calc(100vw-2rem)] bg-ivory rounded-xl p-4 shadow-gold-soft origin-bottom-right"
+            className="royal-frame !absolute bottom-12 md:bottom-14 right-0 w-64 max-w-[calc(100vw-2rem)] bg-ivory rounded-xl p-4 shadow-gold-soft origin-bottom-right"
             role="dialog"
             aria-label="Choose a theme colour"
           >
@@ -98,6 +105,6 @@ export default function ThemePicker() {
       >
         <Palette size={17} />
       </button>
-    </div>
+    </motion.div>
   );
 }

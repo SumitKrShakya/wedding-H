@@ -41,7 +41,7 @@ export default function Hero() {
           custom={1}
           className="font-script text-maroondark text-6xl md:text-8xl leading-[1.1] mt-4"
         >
-          Tanishk <span className="font-display italic text-golddeep text-4xl md:text-6xl align-middle">&amp;</span> Aishwarya
+          Tanishk <span className="font-display italic text-golddeep text-4xl md:text-6xl align-middle">&amp;</span> <span className="script-cap-a">A</span>ishwarya
         </motion.h1>
 
         <motion.div variants={rise} initial="hidden" animate="show" custom={2}>

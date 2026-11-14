@@ -30,7 +30,7 @@ export default function FloatingControls({ playing, onToggleMusic }) {
         initial={{ opacity: 0, x: -24 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 2, duration: 0.7 }}
-        className="fixed bottom-4 md:bottom-5 left-4 md:left-5 z-40"
+        className="fixed bottom-[72px] md:bottom-[76px] left-4 md:left-5 z-40"
       >
         <button
           onClick={onToggleMusic}
@@ -47,7 +47,7 @@ export default function FloatingControls({ playing, onToggleMusic }) {
         initial={{ opacity: 0, x: 24 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 2, duration: 0.7 }}
-        className="fixed bottom-[68px] md:bottom-[76px] right-4 md:right-5 z-40 flex flex-col items-center gap-2 md:gap-3"
+        className="fixed bottom-[124px] md:bottom-[132px] right-4 md:right-5 z-40 flex flex-col items-center gap-2 md:gap-3"
       >
         {showTop && (
           <motion.button
