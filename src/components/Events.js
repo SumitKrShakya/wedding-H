@@ -97,7 +97,7 @@ export default function Events() {
   return (
     <section id="events" className="relative py-24 md:py-32 bg-champagne" data-testid="events-section">
       <SectionHeading
-        eyebrow="Wedding celebrations"
+        eyebrow="Reception celebrations"
         title="Three Days of Joy & Rituals"
         sub="Every moment of our celebration, lovingly planned for you."
       />

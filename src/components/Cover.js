@@ -56,7 +56,7 @@ export default function Cover({ onOpen }) {
           />
 
           <p className="mt-6 text-[10px] md:text-[11px] uppercase tracking-[0.32em] text-cocoa-soft leading-relaxed">
-            You are cordially invited to the wedding of
+            You are cordially invited to the reception of
           </p>
 
           <h1 className="font-script text-maroondark mt-4 leading-[1.05]">

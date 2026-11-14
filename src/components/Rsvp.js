@@ -165,7 +165,7 @@ export default function Rsvp() {
                 or{" "}
                 <a
                   href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-                    "Namaste! RSVP for Tanishk & Aishwarya's wedding (9–13 December 2026): "
+                    "Namaste! RSVP for Tanishk & Aishwarya's reception (9–13 December 2026): "
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"

@@ -19,7 +19,7 @@ export default function FloatingControls({ playing, onToggleMusic }) {
   const whatsappShare = () => {
     const url = window.location.href;
     const text = encodeURIComponent(
-      "You are cordially invited to the wedding of Tanishk & Aishwarya — 9 to 13 December 2026\n" + url
+      "You are cordially invited to the reception of Tanishk & Aishwarya — 9 to 13 December 2026\n" + url
     );
     window.open(`https://wa.me/?text=${text}`, "_blank", "noopener,noreferrer");
   };

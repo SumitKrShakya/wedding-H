@@ -24,10 +24,14 @@ export const WHATSAPP_NUMBER = "918447301076";
 // EDITABLE: paste the exact Google Maps links for each venue here once known.
 // Until then the Get Directions buttons open a Google Maps search for the venue name.
 export const VENUE_MAPS = {
-  kirtan: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Ananda Banquets, Rama Road, Kirti Nagar, New Delhi 110015"),
-  "haldi-mehandi": "",
-  wedding: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("The Grand Horizon Banquet Hall, Shivaji Marg, Moti Nagar, New Delhi 110015"),
+  kirtan: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Ananda Banquets, 33/33A Rama Road, Najafgarh Road Industrial Area, New Delhi 110015"),
+  "haldi-mehandi": "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("26/166 West Patel Nagar, near Community Centre, New Delhi 110008"),
+  wedding: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("The Grand Horizon Banquet, 11A Shivaji Marg, Najafgarh Road, New Delhi 110015"),
 };
+
+// EDITABLE: home address shown for Haldi & Mehandi.
+export const HOME_ADDRESS = "26/166, Ground Floor, West Patel Nagar, New Delhi - 110008";
+export const HOME_LANDMARK = "Near Community Centre";
 
 export function mapsUrlFor(venueKey, venueName) {
   const saved = VENUE_MAPS[venueKey];
@@ -43,10 +47,10 @@ export function mapsUrlFor(venueKey, venueName) {
 /* ------------------------------------------------------------------ */
 
 export const EVENTS = [
-  { day: 1, dayLabel: "Day 1 — 9 December 2026", name: "Mata Ki Chowki", time: "7:00 PM – 11:00 PM", venue: "Ananda Banquets, Kirti Nagar", venueKey: "kirtan", icon: "music", palette: "kirtan" },
+  { day: 1, dayLabel: "Day 1 — 9 December 2026", name: "Mata Ki Chowki", time: "6:30 PM Onwards", venue: "Ananda Banquets, Rama Road", venueKey: "kirtan", icon: "music", palette: "kirtan" },
   { day: 2, dayLabel: "Day 2 — 11 December 2026", name: "Haldi", time: "Afternoon", venue: "At Home", venueKey: "haldi-mehandi", icon: "sun", palette: "haldi" },
   { day: 2, name: "Mehandi", time: "Evening", venue: "At Home", venueKey: "haldi-mehandi", icon: "hand", palette: "mehandi" },
-  { day: 3, dayLabel: "Day 3 — 13 December 2026", name: "Wedding", time: "6:30 PM – Till the Stars Fade", venue: "The Grand Horizon Banquet, Moti Nagar", venueKey: "wedding", icon: "landmark", palette: "shadi" },
+  { day: 3, dayLabel: "Day 3 — 13 December 2026", name: "Reception", time: "6:30 PM – Till the Stars Fade", venue: "The Grand Horizon Banquet, Najafgarh Rd", venueKey: "wedding", icon: "landmark", palette: "shadi" },
 ];
 
 // EDITABLE: venue cards. The "Venues" section is hidden if this list is empty.
@@ -56,8 +60,8 @@ export const VENUES = [
     palette: "kirtan",
     name: "Ananda Banquets",
     date: "9 December 2026",
-    address: "33/33A, Rama Road, Block C, Opposite Apollo Cradle Hospital, Kirti Nagar Industrial Area, New Delhi, Delhi 110015",
-    functions: ["Mata Ki Chowki · 7–11 PM"],
+    address: "33/33A, Rama Road, Opp. Apollo Cradle Hospital, Najafgarh Road, Industrial Area, New Delhi - 110015",
+    functions: ["Mata Ki Chowki · 6:30 PM onwards"],
     image: "/images/venues/venue-1.jpg",
     imagePosition: "center",
   },
@@ -66,8 +70,8 @@ export const VENUES = [
     palette: "shadi",
     name: "The Grand Horizon Banquet",
     date: "13 December 2026",
-    address: "11-A, Shivaji Marg, Najafgarh Industrial Area, Moti Nagar, New Delhi, Delhi 110015",
-    functions: ["Wedding · 6:30 PM till the stars fade"],
+    address: "Plot No. 11A, Shivaji Marg, Najafgarh Road, Adjacent to Apollo Cradle, New Delhi - 110015",
+    functions: ["Reception · 6:30 PM till the stars fade"],
     image: "/images/venues/venue-2.jpg",
     imagePosition: "center",
   },

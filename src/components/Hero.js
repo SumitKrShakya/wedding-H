@@ -31,7 +31,7 @@ export default function Hero() {
           custom={0}
           className="text-[11px] uppercase tracking-[0.4em] text-golddeep"
         >
-          The Wedding of
+          The Reception of
         </motion.p>
 
         <motion.h1
@@ -57,7 +57,7 @@ export default function Hero() {
         >
           <div className="royal-frame arch-top bg-champagne p-2.5 shadow-gold-soft">
             <img
-              src="/images/couple/couple-01.jpg"
+              src="/images/couple/couple-main.jpg"
               alt="Tanishk and Aishwarya"
               className="w-48 sm:w-56 md:w-64 arch-top object-cover"
               draggable="false"
@@ -82,7 +82,7 @@ export default function Hero() {
           custom={5}
           className="text-[10px] sm:text-xs md:text-sm text-cocoa-soft tracking-[0.12em] sm:tracking-[0.2em] uppercase mt-2 leading-relaxed"
         >
-          Kirti Nagar &middot; Moti Nagar &middot; New Delhi
+          New Delhi
         </motion.p>
       </div>
 

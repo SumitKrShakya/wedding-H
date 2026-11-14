@@ -3,8 +3,8 @@ import { Heart, Share2 } from "lucide-react";
 import { toast } from "sonner";
 
 export const INVITE_SHARE = {
-  title: "Tanishk & Aishwarya | Wedding Invitation",
-  text: "You are cordially invited to the wedding of Tanishk & Aishwarya — 9 to 13 December 2026",
+  title: "Tanishk & Aishwarya | Reception Invitation",
+  text: "You are cordially invited to the reception of Tanishk & Aishwarya — 9 to 13 December 2026",
 };
 
 export async function shareInvitation() {

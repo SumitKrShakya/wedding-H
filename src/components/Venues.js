@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Flower2, Sun, Hand, Home, Clock } from "lucide-react";
-import { VENUES, mapsUrlFor } from "../config";
+import { VENUES, mapsUrlFor, HOME_ADDRESS, HOME_LANDMARK } from "../config";
 import { SectionHeading, CornerFloral } from "./Ornaments";
 
 function VenueCard({ venue, index }) {
@@ -95,9 +95,25 @@ export default function Venues() {
           </span>
           <p className="relative text-[10px] uppercase tracking-[0.3em] text-golddeep mt-5">11 December 2026</p>
           <h3 className="relative font-display text-2xl md:text-3xl text-maroondark mt-2">Celebrations at Home</h3>
-          <p className="relative text-sm text-cocoa-soft mt-2">
-            Join us at our residence for an intimate day of colour, music &amp; blessings.
-          </p>
+          <a
+            href={mapsUrlFor("haldi-mehandi", HOME_ADDRESS)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative group block mt-3 max-w-sm mx-auto"
+            data-testid="home-address"
+          >
+            <span className="flex items-start justify-center gap-1.5 text-sm text-cocoa-soft leading-relaxed">
+              <MapPin size={14} className="text-golddeep shrink-0 mt-[3px]" />
+              <span>
+                {HOME_ADDRESS}
+                <span className="block italic font-display text-base text-cocoa-soft/90">({HOME_LANDMARK})</span>
+              </span>
+            </span>
+            <span className="mt-4 inline-flex items-center gap-2 border-2 border-golddeep text-maroondark font-bold text-xs uppercase tracking-[0.22em] px-6 py-2.5 rounded-full transition-colors duration-300 group-hover:bg-maroon group-hover:text-ivory group-hover:border-maroon">
+              <MapPin size={15} strokeWidth={2.5} />
+              Get Directions
+            </span>
+          </a>
           <div className="h-px w-12 bg-golddeep/50 mx-auto mt-5" />
 
           <div className="relative mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">

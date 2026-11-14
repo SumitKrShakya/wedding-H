@@ -9,7 +9,7 @@ export const THEMES = [
     // (Kirtan red & gold, Haldi yellow & orange, Mehandi green & gold,
     //  Shadi maroon & gold, RSVP purple & gold) — see .pal-* in index.css
     id: "celebration",
-    name: "Wedding Celebration",
+    name: "Reception Celebration",
     swatch: "conic-gradient(#B91C1C 0 20%, #EA580C 0 40%, #3F7D20 0 60%, #800000 0 80%, #7E22CE 0)",
     colors: {
       ivory: "#FDFBF7", champagne: "#F5EEDB", maroon: "#800000", maroondark: "#4A0404",
