@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default (Royal Maroon) values so the page paints correctly before JS runs. */
+:root {
+  --c-ivory: 253 251 247;
+  --c-champagne: 245 238 219;
+  --c-maroon: 128 0 0;
+  --c-maroondark: 74 4 4;
+  --c-gold: 212 175 55;
+  --c-golddeep: 184 134 11;
+  --c-cocoa: 44 26 26;
+  --c-cocoa-soft: 74 59 59;
+  --hex-gold: #d4af37;
+  --hex-golddeep: #b8860b;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: rgb(var(--c-ivory));
+  color: rgb(var(--c-cocoa));
+  font-family: Outfit, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.5s ease;
+}
+
+/* Smooth colour change when switching theme */
+.theme-anim,
+.theme-anim * {
+  transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease, fill 0.5s ease, stroke 0.5s ease !important;
+}
+
+.grain-overlay {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Cpath filter='url(%23a)' opacity='.4' d='M0 0h160v160H0z'/%3E%3C/svg%3E");
+  inset: 0;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  pointer-events: none;
+  position: fixed;
+  z-index: 10;
+}
+
+.pattern-maroon {
+  background-color: rgb(var(--c-maroondark));
+  background-image: var(
+    --pattern-url,
+    url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-opacity='.1'%3E%3Cpath d='M36 8c4 8 12 12 12 22a12 12 0 1 1-24 0c0-10 8-14 12-22z'/%3E%3Ccircle cx='36' cy='54' r='2.5'/%3E%3Cpath d='M10 36h10m32 0h10'/%3E%3C/g%3E%3C/svg%3E")
+  );
+}
+
+.royal-frame {
+  border: 1px solid rgb(var(--c-golddeep) / 0.55);
+  position: relative;
+}
+.royal-frame::after {
+  border: 1px solid rgb(var(--c-golddeep) / 0.3);
+  border-radius: inherit;
+  content: "";
+  inset: 6px;
+  pointer-events: none;
+  position: absolute;
+}
+
+.arch-top {
+  border-radius: 999px 999px 14px 14px;
+}
+
+.gold-text-shimmer {
+  animation: shimmer-slide 4s linear infinite;
+  background: linear-gradient(
+    100deg,
+    color-mix(in srgb, var(--hex-golddeep) 80%, black) 10%,
+    var(--hex-gold) 35%,
+    color-mix(in srgb, var(--hex-gold) 30%, white) 50%,
+    var(--hex-gold) 65%,
+    color-mix(in srgb, var(--hex-golddeep) 80%, black) 90%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% auto;
+  color: transparent;
+}
+@keyframes shimmer-slide {
+  to {
+    background-position: 200%;
+  }
+}
+
+.petal-wrap {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  z-index: 20;
+}
+.petal {
+  animation: petal-fall linear infinite;
+  position: absolute;
+  top: -8vh;
+}
+.petal,
+.petal-sway {
+  will-change: transform;
+}
+.petal-sway {
+  animation: petal-sway ease-in-out infinite alternate;
+}
+@keyframes petal-fall {
+  to {
+    transform: translateY(116vh) rotate(560deg);
+  }
+}
+@keyframes petal-sway {
+  0% {
+    transform: translateX(calc(var(--drift, 24px) * -1)) rotate(-14deg);
+  }
+  to {
+    transform: translateX(var(--drift, 24px)) rotate(14deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .grain-overlay,
+  .petal-wrap {
+    display: none;
+  }
+  .gold-text-shimmer {
+    animation: none;
+  }
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Section palettes for the "Wedding Celebration" theme.
+   Gold stays the accent everywhere; each section swaps its own
+   background and main colour. Other themes ignore these classes.
+   ------------------------------------------------------------------ */
+[data-theme="celebration"] .pal-kirtan {
+  /* Mata ki Chowki — red & gold */
+  --c-ivory: 255 251 245;
+  --c-champagne: 251 235 221;
+  --c-maroon: 185 28 28;
+  --c-maroondark: 127 29 29;
+  --c-gold: 212 175 55;
+  --c-golddeep: 184 134 11;
+  --c-cocoa: 59 21 21;
+  --c-cocoa-soft: 92 51 51;
+}
+[data-theme="celebration"] .pal-haldi {
+  /* Haldi — yellow & orange */
+  --c-ivory: 255 252 235;
+  --c-champagne: 254 243 199;
+  --c-maroon: 234 88 12;
+  --c-maroondark: 154 52 18;
+  --c-gold: 245 179 1;
+  --c-golddeep: 180 83 9;
+  --c-cocoa: 61 36 16;
+  --c-cocoa-soft: 107 68 35;
+}
+[data-theme="celebration"] .pal-mehandi {
+  /* Mehandi — green & gold */
+  --c-ivory: 250 253 245;
+  --c-champagne: 233 242 220;
+  --c-maroon: 63 125 32;
+  --c-maroondark: 31 77 18;
+  --c-gold: 212 175 55;
+  --c-golddeep: 168 132 26;
+  --c-cocoa: 30 46 20;
+  --c-cocoa-soft: 63 82 51;
+}
+[data-theme="celebration"] .pal-shadi {
+  /* Shadi — maroon & gold */
+  --c-ivory: 253 251 247;
+  --c-champagne: 245 238 219;
+  --c-maroon: 128 0 0;
+  --c-maroondark: 74 4 4;
+  --c-gold: 212 175 55;
+  --c-golddeep: 184 134 11;
+  --c-cocoa: 44 26 26;
+  --c-cocoa-soft: 74 59 59;
+}
+[data-theme="celebration"] .pal-rsvp {
+  /* RSVP — purple & gold */
+  --c-ivory: 252 249 254;
+  --c-champagne: 241 232 248;
+  --c-maroon: 126 34 206;
+  --c-maroondark: 76 29 149;
+  --c-gold: 212 175 55;
+  --c-golddeep: 184 134 11;
+  --c-cocoa: 42 26 58;
+  --c-cocoa-soft: 79 61 96;
+}
