@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Heart, ChevronDown } from "lucide-react";
 import { toast } from "sonner";
 import { WHATSAPP_NUMBER } from "../config";
+import { DATE_LABEL } from "../variant";
 import { submitRsvp } from "../api";
 import { SectionHeading } from "./Ornaments";
 
@@ -68,7 +69,7 @@ export default function Rsvp() {
             <p className="mt-4 text-sm md:text-base text-cocoa-soft leading-relaxed">
               Your response has been received with love.
               {done.attending === "yes"
-                ? " We look forward to celebrating with you from 9 to 13 December 2026."
+                ? ` We look forward to celebrating with you on ${DATE_LABEL}.`
                 : " You will be in our hearts and prayers."}
             </p>
             <button
@@ -165,7 +166,7 @@ export default function Rsvp() {
                 or{" "}
                 <a
                   href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-                    "Namaste! RSVP for Tanishk & Aishwarya's reception (9–13 December 2026): "
+                    `Namaste! RSVP for Tanishk & Aishwarya's reception (${DATE_LABEL}): `
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"

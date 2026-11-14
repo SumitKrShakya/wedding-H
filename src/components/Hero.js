@@ -1,3 +1,4 @@
+import { DATE_LABEL } from "../variant";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Divider, CornerFloral } from "./Ornaments";
@@ -72,7 +73,7 @@ export default function Hero() {
           custom={4}
           className="font-display text-xl md:text-2xl text-maroondark tracking-[0.14em] mt-4"
         >
-          9 – 13 December 2026
+          {DATE_LABEL}
         </motion.p>
 
         <motion.p

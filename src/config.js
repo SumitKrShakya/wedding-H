@@ -3,7 +3,7 @@
    lives in this one file.
    ========================================================================== */
 
-export const DATE_RANGE = "9 – 13 December 2026";
+export const DATE_RANGE = "9 | 11 | 13 December 2026"; // per-link label: see DATE_LABEL in src/variant.js
 
 export const COUPLE = {
   groom: "Tanishk",
@@ -47,10 +47,10 @@ export function mapsUrlFor(venueKey, venueName) {
 /* ------------------------------------------------------------------ */
 
 export const EVENTS = [
-  { day: 1, dayLabel: "Day 1 — 9 December 2026", name: "Mata Ki Chowki", time: "6:30 PM Onwards", venue: "Ananda Banquets, Rama Road", venueKey: "kirtan", icon: "music", palette: "kirtan" },
-  { day: 2, dayLabel: "Day 2 — 11 December 2026", name: "Haldi", time: "Afternoon", venue: "At Home", venueKey: "haldi-mehandi", icon: "sun", palette: "haldi" },
-  { day: 2, name: "Mehandi", time: "Evening", venue: "At Home", venueKey: "haldi-mehandi", icon: "hand", palette: "mehandi" },
-  { day: 3, dayLabel: "Day 3 — 13 December 2026", name: "Reception", time: "6:30 PM – Till the Stars Fade", venue: "The Grand Horizon Banquet, Najafgarh Rd", venueKey: "wedding", icon: "landmark", palette: "shadi" },
+  { date: 9, name: "Mata Ki Chowki", time: "6:30 PM Onwards", venue: "Ananda Banquets, Rama Road", venueKey: "kirtan", icon: "music", palette: "kirtan" },
+  { date: 11, name: "Haldi", time: "Afternoon", venue: "At Home", venueKey: "haldi-mehandi", icon: "sun", palette: "haldi" },
+  { date: 11, name: "Mehandi", time: "Evening", venue: "At Home", venueKey: "haldi-mehandi", icon: "hand", palette: "mehandi" },
+  { date: 13, name: "Reception", time: "6:30 PM – Till the Stars Fade", venue: "The Grand Horizon Banquet, Najafgarh Rd", venueKey: "wedding", icon: "landmark", palette: "shadi" },
 ];
 
 // EDITABLE: venue cards. The "Venues" section is hidden if this list is empty.
@@ -60,6 +60,7 @@ export const VENUES = [
     palette: "kirtan",
     name: "Ananda Banquets",
     date: "9 December 2026",
+    dateNum: 9,
     address: "33/33A, Rama Road, Opp. Apollo Cradle Hospital, Najafgarh Road, Industrial Area, New Delhi - 110015",
     functions: ["Mata Ki Chowki · 6:30 PM onwards"],
     image: "/images/venues/venue-1.jpg",
@@ -70,6 +71,7 @@ export const VENUES = [
     palette: "shadi",
     name: "The Grand Horizon Banquet",
     date: "13 December 2026",
+    dateNum: 13,
     address: "Plot No. 11A, Shivaji Marg, Najafgarh Road, Adjacent to Apollo Cradle, New Delhi - 110015",
     functions: ["Reception · 6:30 PM till the stars fade"],
     image: "/images/venues/venue-2.jpg",

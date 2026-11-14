@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Flower2, Sun, Hand, Home, Clock } from "lucide-react";
-import { VENUES, mapsUrlFor, HOME_ADDRESS, HOME_LANDMARK } from "../config";
+import { mapsUrlFor, HOME_ADDRESS, HOME_LANDMARK } from "../config";
+import { VARIANT_VENUES, SHOW_HOME_CARD } from "../variant";
 import { SectionHeading, CornerFloral } from "./Ornaments";
 
 function VenueCard({ venue, index }) {
@@ -64,15 +65,20 @@ export default function Venues() {
     <section id="venues" className="relative py-24 md:py-32 bg-ivory" data-testid="venues-section">
       <SectionHeading
         eyebrow="Where we celebrate"
-        title="The Venues"
+        title={VARIANT_VENUES.length === 1 && !SHOW_HOME_CARD ? "The Venue" : "The Venues"}
         sub="Find your way to our celebrations."
       />
-      <div className="max-w-4xl mx-auto mt-14 px-6 grid md:grid-cols-2 gap-8 md:gap-10">
-        {VENUES.map((v, i) => (
+      <div
+        className={`mx-auto mt-14 px-6 grid gap-8 md:gap-10 ${
+          VARIANT_VENUES.length > 1 ? "max-w-4xl md:grid-cols-2" : "max-w-md"
+        }`}
+      >
+        {VARIANT_VENUES.map((v, i) => (
           <VenueCard key={v.key} venue={v} index={i} />
         ))}
       </div>
 
+      {SHOW_HOME_CARD && (
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -142,6 +148,7 @@ export default function Venues() {
           </div>
         </div>
       </motion.div>
+      )}
     </section>
   );
 }

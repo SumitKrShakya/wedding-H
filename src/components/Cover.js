@@ -1,3 +1,4 @@
+import { DATE_LABEL } from "../variant";
 import { motion } from "framer-motion";
 
 const ease = [0.76, 0, 0.24, 1];
@@ -78,7 +79,7 @@ export default function Cover({ onOpen }) {
           </p>
 
           <p className="font-display text-lg md:text-xl text-maroondark mt-5 tracking-[0.12em]">
-            9 – 13 December 2026
+            {DATE_LABEL}
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-2" aria-label="Opening invitation" data-testid="cover-opening-dots">

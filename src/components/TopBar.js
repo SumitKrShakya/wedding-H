@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
+import { VARIANT } from "../variant";
 
 const LINKS = [
   { href: "#save-the-date", label: "Save the Date" },
   { href: "#families", label: "Families" },
   { href: "#events", label: "Events" },
   { href: "#venues", label: "Venues" },
-];
+].filter((l) => VARIANT.showEvents || l.href !== "#events");
 
 export default function TopBar() {
   return (
@@ -31,6 +32,7 @@ export default function TopBar() {
             </a>
           ))}
         </nav>
+        {VARIANT.showRsvp ? (
         <a
           href="#rsvp"
           data-testid="topbar-rsvp-link"
@@ -38,6 +40,9 @@ export default function TopBar() {
         >
           RSVP
         </a>
+        ) : (
+          <span className="w-16" aria-hidden="true" />
+        )}
       </div>
     </motion.header>
   );

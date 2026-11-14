@@ -1,10 +1,11 @@
+import { DATE_LABEL } from "../variant";
 import { motion } from "framer-motion";
 import { Heart, Share2 } from "lucide-react";
 import { toast } from "sonner";
 
 export const INVITE_SHARE = {
   title: "Tanishk & Aishwarya | Reception Invitation",
-  text: "You are cordially invited to the reception of Tanishk & Aishwarya — 9 to 13 December 2026",
+  text: "You are cordially invited to the reception of Tanishk & Aishwarya — " + DATE_LABEL,
 };
 
 export async function shareInvitation() {
@@ -73,7 +74,7 @@ export default function FinalSection() {
         </motion.p>
 
         <p className="text-gold/80 text-[11px] uppercase tracking-[0.35em] mt-8">
-          9 – 13 December 2026
+          {DATE_LABEL}
         </p>
 
         <div className="flex items-center justify-center gap-3 mt-10" aria-hidden="true">

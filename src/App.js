@@ -12,8 +12,9 @@ import Venues from "./components/Venues";
 import Rsvp from "./components/Rsvp";
 import FinalSection from "./components/FinalSection";
 import FloatingControls from "./components/FloatingControls";
+import { VARIANT, VARIANT_VENUES } from "./variant";
 import Petals from "./components/Petals";
-import { AUDIO_URL, VENUES } from "./config";
+import { AUDIO_URL } from "./config";
 
 function Loader() {
   return (
@@ -117,9 +118,9 @@ export default function App() {
             <Hero />
             <SaveTheDate />
             <Families />
-            <Events />
-            {VENUES.length > 0 && <Venues />}
-            <Rsvp />
+            {VARIANT.showEvents && <Events />}
+            {VARIANT_VENUES.length > 0 && <Venues />}
+            {VARIANT.showRsvp && <Rsvp />}
           </main>
           <FinalSection />
           <FloatingControls playing={playing} onToggleMusic={toggleMusic} />

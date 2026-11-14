@@ -4,6 +4,7 @@ import useCountdown from "../hooks/useCountdown";
 import { COUNTDOWN_TARGET_IST } from "../config";
 import { SectionHeading, Divider } from "./Ornaments";
 import ScratchCard from "./ScratchCard";
+import { VARIANT, hasDate } from "../variant";
 
 const WEEKDAYS = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 
@@ -38,7 +39,7 @@ function DecemberCalendar() {
           <span key={`b${i}`} />
         ))}
         {days.map((d) => {
-          const weddingDay = d === 9 || d === 11 || d === 13;
+          const weddingDay = hasDate(d);
           return (
             <span key={d} className="relative py-1.5 text-sm" data-testid={`calendar-day-${d}`}>
               <span
@@ -55,7 +56,11 @@ function DecemberCalendar() {
         })}
       </div>
       <p className="font-display italic text-cocoa-soft text-sm mt-4 text-center">
-        {weekdayLong(9)}, {weekdayLong(11)} &amp; {weekdayLong(13)} — the celebration days
+        {(() => {
+          const names = VARIANT.dates.map(weekdayLong);
+          if (names.length === 1) return `${names[0]} — the celebration day`;
+          return `${names.slice(0, -1).join(", ")} & ${names[names.length - 1]} — the celebration days`;
+        })()}
       </p>
     </motion.div>
   );

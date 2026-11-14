@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Clock, MapPin, Gem, Landmark, Sparkles, Music, Sun, Drum, UtensilsCrossed, Home, Hand } from "lucide-react";
-import { EVENTS } from "../config";
+import { VARIANT, VARIANT_EVENTS } from "../variant";
 import { SectionHeading } from "./Ornaments";
 
 const ICONS = {
@@ -93,22 +93,24 @@ function DayBlock({ dayLabel, events, startIndex }) {
 }
 
 export default function Events() {
-  const days = [1, 2, 3];
+  const days = VARIANT.dates;
+  const countWord = ["", "One", "Two", "Three", "Four", "Five"][days.length] || days.length;
   return (
     <section id="events" className="relative py-24 md:py-32 bg-champagne" data-testid="events-section">
       <SectionHeading
         eyebrow="Reception celebrations"
-        title="Three Days of Joy & Rituals"
+        title={days.length === 1 ? "A Day of Joy & Rituals" : `${countWord} Days of Joy & Rituals`}
         sub="Every moment of our celebration, lovingly planned for you."
       />
       <div className="max-w-5xl mx-auto mt-16 px-6">
-        {days.map((d) => {
-          const events = EVENTS.filter((e) => e.day === d);
-          const startIndex = EVENTS.findIndex((e) => e.day === d);
+        {days.map((d, dayIndex) => {
+          const events = VARIANT_EVENTS.filter((e) => e.date === d);
+          const startIndex = VARIANT_EVENTS.findIndex((e) => e.date === d);
+          if (!events.length) return null;
           return (
             <DayBlock
               key={d}
-              dayLabel={events[0].dayLabel}
+              dayLabel={`Day ${dayIndex + 1} — ${d} December 2026`}
               events={events}
               startIndex={startIndex}
             />

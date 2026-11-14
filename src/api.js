@@ -1,5 +1,6 @@
 import axios from "axios";
 import { API_BASE, LOCAL_ADMIN_PIN, WHATSAPP_NUMBER } from "./config";
+import { DATE_LABEL } from "./variant";
 
 const WISHES_KEY = "wedding_wishes";
 
@@ -26,7 +27,7 @@ export async function submitRsvp(payload) {
   // No backend: send the RSVP to the family on WhatsApp.
   if (WHATSAPP_NUMBER) {
     const lines = [
-      "Namaste! RSVP for Tanishk & Aishwarya's reception (9–13 December 2026)",
+      `Namaste! RSVP for Tanishk & Aishwarya's reception (${DATE_LABEL})`,
       `Name: ${payload.name}`,
       `Attending: ${payload.attending === "yes" ? "Joyfully Yes" : "Regretfully No"}`,
       `Guests: ${payload.guests}`,

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Volume2, VolumeX, ArrowUp, Share2 } from "lucide-react";
 import { shareInvitation } from "./FinalSection";
+import { DATE_LABEL } from "../variant";
 
 const btnCls =
   "w-10 h-10 md:w-11 md:h-11 rounded-full bg-maroondark/95 text-gold border border-gold/50 shadow-gold-soft flex items-center justify-center backdrop-blur transition-transform duration-200 hover:scale-105 active:scale-95";
@@ -19,7 +20,7 @@ export default function FloatingControls({ playing, onToggleMusic }) {
   const whatsappShare = () => {
     const url = window.location.href;
     const text = encodeURIComponent(
-      "You are cordially invited to the reception of Tanishk & Aishwarya — 9 to 13 December 2026\n" + url
+      "You are cordially invited to the reception of Tanishk & Aishwarya — " + DATE_LABEL + "\n" + url
     );
     window.open(`https://wa.me/?text=${text}`, "_blank", "noopener,noreferrer");
   };
