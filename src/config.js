@@ -47,7 +47,7 @@ export function mapsUrlFor(venueKey, venueName) {
 /* ------------------------------------------------------------------ */
 
 export const EVENTS = [
-  { date: 9, name: "Mata Ki Chowki", time: "6:30 PM Onwards", venue: "Ananda Banquets, Rama Road", venueKey: "kirtan", icon: "music", palette: "kirtan" },
+  { date: 9, name: "Krishna Sandhya", time: "6:30 PM Onwards", venue: "Ananda Banquets, Rama Road", venueKey: "kirtan", icon: "music", palette: "kirtan" },
   { date: 11, name: "Haldi", time: "Afternoon", venue: "At Home", venueKey: "haldi-mehandi", icon: "sun", palette: "haldi" },
   { date: 11, name: "Mehandi", time: "Evening", venue: "At Home", venueKey: "haldi-mehandi", icon: "hand", palette: "mehandi" },
   { date: 13, name: "Reception", time: "6:30 PM – Till the Stars Fade", venue: "The Grand Horizon Banquet, Najafgarh Rd", venueKey: "wedding", icon: "landmark", palette: "shadi" },
@@ -62,7 +62,7 @@ export const VENUES = [
     date: "9 December 2026",
     dateNum: 9,
     address: "33/33A, Rama Road, Opp. Apollo Cradle Hospital, Najafgarh Road, Industrial Area, New Delhi - 110015",
-    functions: ["Mata Ki Chowki · 6:30 PM onwards"],
+    functions: ["Krishna Sandhya · 6:30 PM onwards"],
     image: "/images/venues/venue-1.jpg",
     imagePosition: "center",
   },

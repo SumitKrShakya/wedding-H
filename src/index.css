@@ -154,7 +154,7 @@ body {
    background and main colour. Other themes ignore these classes.
    ------------------------------------------------------------------ */
 [data-theme="celebration"] .pal-kirtan {
-  /* Mata ki Chowki — red & gold */
+  /* Krishna Sandhya — red & gold */
   --c-ivory: 255 251 245;
   --c-champagne: 251 235 221;
   --c-maroon: 185 28 28;

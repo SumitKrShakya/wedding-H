@@ -6,7 +6,7 @@
 export const THEMES = [
   {
     // Maroon & gold base, with each section in its own colours
-    // (Kirtan red & gold, Haldi yellow & orange, Mehandi green & gold,
+    // (Krishna Sandhya red & gold, Haldi yellow & orange, Mehandi green & gold,
     //  Shadi maroon & gold, RSVP purple & gold) — see .pal-* in index.css
     id: "celebration",
     name: "Reception Celebration",
